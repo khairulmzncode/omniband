@@ -4,9 +4,9 @@
 
 ### One download manager. Multiple internet connections.
 
-OmniBand routes supported downloads across available network adapters and keeps everything in one queue.
+OmniBand is a Windows download manager that routes supported transfers across selected network adapters and keeps them in one queue.
 
-[**Download for Windows**](https://github.com/khairulmzncode/omniband-open/releases/latest) | [Features](#-features) | [System requirements](#system-requirements) | [Browser extension](#-browser-extension)
+[**Download for Windows**](https://github.com/khairulmzncode/omniband-open/releases/latest) | [Product website](https://ominbandweb.vercel.app/) | [How it works](#how-it-works) | [Tech stack](#tech-stack) | [Support on Ko-fi](#support)
 
 </div>
 
@@ -14,12 +14,33 @@ OmniBand routes supported downloads across available network adapters and keeps 
 
 ## ✨ Features
 
-- **Use multiple connections:** Route supported downloads over Wi-Fi, Ethernet, and tethered adapters.
-- **Manage one queue:** View download progress and network adapter activity in the desktop app.
-- **Pause and resume:** Continue transfers when the file host supports the required range requests and metadata.
-- **Capture browser downloads:** Send downloads from Chrome or Edge to OmniBand with the companion extension.
+- **Multi-adapter transfers:** Route supported downloads over Wi-Fi, Ethernet, and tethered adapters.
+- **One download queue:** View progress and adapter activity in the desktop app.
+- **Resume supported downloads:** Continue transfers when the file host provides compatible byte-range and file metadata support.
+- **Browser handoff:** Send downloads from Chrome or Edge to OmniBand through the companion extension.
+- **Adapter change detection:** Refresh the available adapter list as network connections change while the app is running.
 
-> **How multi-connection works:** OmniBand distributes downloads handled by the app. It does not combine all Windows network traffic, and actual speed depends on the file host and the capacity of each connection.
+Multi-adapter transfers only apply to downloads handled by OmniBand. They do not combine all Windows network traffic, and the result depends on the file host and the capacity of each connection.
+
+## How it works
+
+1. OmniBand detects active network adapters and lets you choose the connections to use.
+2. For a compatible download, the app checks whether the server supports HTTP byte ranges, then requests file ranges in parallel. Connections are bound to the selected adapters.
+3. The downloaded ranges are assembled into one file. Resume information lets compatible transfers continue after an interruption.
+4. The Chrome and Edge extension captures a browser download and hands it to the desktop app using the browser's Native Messaging connection.
+
+If the download server does not support byte ranges, OmniBand cannot split that file across adapters. More connections do not guarantee a faster download.
+
+## Tech stack
+
+| Component | Technologies |
+| --- | --- |
+| Windows desktop app | C#, .NET 10, WPF, and XAML |
+| Download and network engine | .NET `HttpClient`, HTTP byte ranges, sockets bound to adapter IP addresses, and Windows network-interface notifications |
+| Chrome and Edge extension | JavaScript, Chrome Extension Manifest V3, and Native Messaging |
+| Product website | TypeScript, React 19, and Next.js 16 |
+
+The product website is a separate project. It is not needed to install or run the Windows app.
 
 ## 🚀 Get started
 
@@ -50,4 +71,18 @@ The installer is not code-signed yet. Windows may show its standard unknown-publ
 
 Download the latest installer or view previous versions on the [Releases page](https://github.com/khairulmzncode/omniband-open/releases).
 
-The repository is intentionally limited to this README. Installers are distributed as release assets.
+This repository contains the product README. Downloadable app builds are published as GitHub Release assets.
+
+## 🌐 Product website
+
+Visit [ominbandweb.vercel.app](https://ominbandweb.vercel.app/) for product information and the download page.
+
+## ☕ Support
+
+If OmniBand is useful to you, you can support its development on Ko-fi:
+
+<div align="center">
+
+[![Support me on Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/miezan)
+
+</div>
