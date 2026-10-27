@@ -1,23 +1,23 @@
-# OmniBand
-
 <div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:102B2B,50:146B5D,100:9ACB68&height=230&section=header&text=OmniBand&fontSize=72&fontColor=F5FFF5&fontAlignY=40&desc=One%20download%20manager.%20Multiple%20internet%20connections.&descSize=17&descAlignY=64" alt="OmniBand. One download manager, multiple internet connections." width="100%">
 
 ### One download manager. Multiple internet connections.
 
-OmniBand is a Windows download manager that routes supported downloads across your available network adapters and keeps everything in one queue.
+OmniBand routes supported downloads across available network adapters and keeps everything in one queue.
 
-[**Download for Windows**](https://github.com/khairulmzncode/omniband-open/releases/latest) · [How it works](#how-it-works) · [Browser extension](#browser-extension)
+[**Download for Windows**](https://github.com/khairulmzncode/omniband-open/releases/latest) | [Features](#-features) | [System requirements](#system-requirements) | [Browser extension](#-browser-extension)
 
 </div>
 
 ---
 
-## ✨ What you can do
+## ✨ Features
 
-- **Use multiple connections** — Route supported downloads over Wi-Fi, Ethernet, and tethered adapters.
-- **Manage one queue** — View download progress and network adapter activity in the desktop app.
-- **Pause and resume** — Continue transfers when the file host supports the required range requests and metadata.
-- **Capture browser downloads** — Send downloads from Chrome or Edge to OmniBand with the companion extension.
+- **Use multiple connections:** Route supported downloads over Wi-Fi, Ethernet, and tethered adapters.
+- **Manage one queue:** View download progress and network adapter activity in the desktop app.
+- **Pause and resume:** Continue transfers when the file host supports the required range requests and metadata.
+- **Capture browser downloads:** Send downloads from Chrome or Edge to OmniBand with the companion extension.
 
 > **How multi-connection works:** OmniBand distributes downloads handled by the app. It does not combine all Windows network traffic, and actual speed depends on the file host and the capacity of each connection.
 
@@ -29,8 +29,14 @@ OmniBand is a Windows download manager that routes supported downloads across yo
 
 ### System requirements
 
-- Windows 10 or Windows 11 (64-bit)
-- At least one working internet connection
+- Windows 10 or Windows 11, 64-bit
+- 64-bit (x64) processor
+- 4 GB RAM recommended for Windows and OmniBand running together
+- About 250 MB of free disk space for installation
+- Internet connection and at least one enabled network adapter
+- Chrome or Microsoft Edge for browser download capture (optional)
+
+OmniBand includes the .NET runtime, so you do not need to install .NET separately. Multi-connection downloads require two or more active network adapters. The memory and disk figures above are practical recommendations, not measured minimums.
 
 ## 🌐 Browser extension
 
