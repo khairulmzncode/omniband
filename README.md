@@ -29,10 +29,10 @@ OmniBand routes supported downloads across available network adapters and keeps 
 
 ### System requirements
 
-- Windows 10 or Windows 11, 64-bit
+- Windows 11, 64-bit, or a Windows 10 Enterprise/LTSC version supported by [.NET 10](https://learn.microsoft.com/dotnet/core/install/windows#supported-versions)
 - 64-bit (x64) processor
 - 4 GB RAM recommended for Windows and OmniBand running together
-- About 250 MB of free disk space for installation
+- About 500 MB of free disk space to allow for the installer, temporary extraction, and installed app
 - Internet connection and at least one enabled network adapter
 - Chrome or Microsoft Edge for browser download capture (optional)
 
