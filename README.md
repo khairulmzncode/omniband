@@ -1,29 +1,47 @@
 # OmniBand
 
-OmniBand is a Windows download manager that can route supported downloads across multiple active network adapters and keep them organized in one queue.
+<div align="center">
 
-## Features
+### One download manager. Multiple internet connections.
 
-- Uses Wi-Fi, Ethernet, and tethered connections together for supported downloads.
-- Pauses and resumes transfers when the source server provides compatible range and file metadata support.
-- Captures browser downloads from Chrome and Edge through the companion extension.
-- Shows adapter activity and download progress in one desktop app.
+OmniBand is a Windows download manager that routes supported downloads across your available network adapters and keeps everything in one queue.
 
-Transfer speed depends on the file host, the network adapters available, and the independent capacity of each connection. OmniBand does not combine all Windows network traffic; it distributes downloads handled by the app.
+[**Download for Windows**](https://github.com/khairulmzncode/omniband-open/releases/latest) · [How it works](#how-it-works) · [Browser extension](#browser-extension)
 
-## Requirements
+</div>
 
-- Windows 10 or Windows 11, 64-bit.
-- Network adapters with working internet connections.
+---
 
-## Install
+## ✨ What you can do
 
-1. Download the latest `OmniBand_Setup` installer from [GitHub Releases](https://github.com/khairulmzncode/omniband-open/releases/latest).
-2. Run the installer and launch OmniBand.
-3. To connect Chrome or Edge, open **Settings** in OmniBand, choose **Set up extension**, and follow the on-screen instructions.
+- **Use multiple connections** — Route supported downloads over Wi-Fi, Ethernet, and tethered adapters.
+- **Manage one queue** — View download progress and network adapter activity in the desktop app.
+- **Pause and resume** — Continue transfers when the file host supports the required range requests and metadata.
+- **Capture browser downloads** — Send downloads from Chrome or Edge to OmniBand with the companion extension.
 
-The installer is not code-signed yet, so Windows may show its standard unknown-publisher warning.
+> **How multi-connection works:** OmniBand distributes downloads handled by the app. It does not combine all Windows network traffic, and actual speed depends on the file host and the capacity of each connection.
 
-## Releases
+## 🚀 Get started
 
-This repository contains the app README. Windows installers are attached to the matching GitHub Release instead of being committed to the repository.
+1. Download the latest Windows installer from [GitHub Releases](https://github.com/khairulmzncode/omniband-open/releases/latest).
+2. Run the installer and open OmniBand.
+3. In the app, open **Settings** → **Set up extension** to connect Chrome or Edge.
+
+### System requirements
+
+- Windows 10 or Windows 11 (64-bit)
+- At least one working internet connection
+
+## 🌐 Browser extension
+
+The Chrome and Edge companion extension captures browser downloads and hands them to the OmniBand desktop app. Install or connect it by following **Settings** → **Set up extension** in OmniBand.
+
+## ⚠️ Windows installer notice
+
+The installer is not code-signed yet. Windows may show its standard unknown-publisher warning when you run it.
+
+## 📦 Releases
+
+Download the latest installer or view previous versions on the [Releases page](https://github.com/khairulmzncode/omniband-open/releases).
+
+The repository is intentionally limited to this README. Installers are distributed as release assets.
