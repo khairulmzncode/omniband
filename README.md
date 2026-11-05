@@ -79,6 +79,7 @@ GitHub Releases provide the free Windows installer, release notes, and optional 
 
 - Updated the desktop app and installer version to 1.0.1.
 - Rebuilt the self-contained x64 Windows installer with the current release packaging process.
+- Added Windows uninstall support; removing the app also clears its browser-host and startup entries, while downloads and saved settings are retained by default.
 - Added a SHA-256 manifest for the app executable and installer, plus an unsigned-package notice.
 - The installer remains unsigned, so Windows may show its unknown-publisher warning.
 - This deployment changed version and release packaging; it did not include new download-engine or UI behavior.
