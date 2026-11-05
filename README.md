@@ -6,7 +6,9 @@
 
 OmniBand is a Windows download manager that routes supported transfers across selected network adapters and keeps them in one queue.
 
-[**Download for Windows**](https://github.com/khairulmzncode/omniband-open/releases/latest) | [Product website](https://ominbandweb.vercel.app/) | [How it works](#how-it-works) | [Tech stack](#tech-stack) | [Support on Ko-fi](#support)
+OmniBand is proprietary software. The Windows installer is free to download from the product website. Release assets include the installer and may include a portable application package and the companion browser extension; the Windows desktop application source code is not published here.
+
+[**Download for Windows**](https://ominbandweb.vercel.app/api/v1/download) | [Product website](https://ominbandweb.vercel.app/) | [How it works](#how-it-works) | [Tech stack](#tech-stack) | [Support on Ko-fi](#support)
 
 </div>
 
@@ -44,7 +46,7 @@ The product website is a separate project. It is not needed to install or run th
 
 ## 🚀 Get started
 
-1. Download the latest Windows installer from [GitHub Releases](https://github.com/khairulmzncode/omniband-open/releases/latest).
+1. Download the latest Windows installer free from the [OmniBand website](https://ominbandweb.vercel.app/api/v1/download).
 2. Run the installer and open OmniBand.
 3. In the app, open **Settings** → **Set up extension** to connect Chrome or Edge.
 
@@ -69,9 +71,9 @@ The installer is not code-signed yet. Windows may show its standard unknown-publ
 
 ## 📦 Releases
 
-Download the latest installer or view previous versions on the [Releases page](https://github.com/khairulmzncode/omniband-open/releases).
+Download the latest installer or view previous versions on the [OmniBand website](https://ominbandweb.vercel.app/rilis).
 
-This repository contains the product README. Downloadable app builds are published as GitHub Release assets.
+GitHub Releases provide the free Windows installer, release notes, and optional portable or browser-extension packages. The Windows desktop application source code remains proprietary and is not published here. Browser extension scripts are inspectable as part of the separately installed extension.
 
 ## 🌐 Product website
 
