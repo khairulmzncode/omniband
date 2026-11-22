@@ -75,6 +75,16 @@ Download the latest installer from the [OmniBand website](https://ominbandweb.ve
 
 GitHub Releases contain the installer, portable app, checksums, and setup instructions; the extension ships inside the app packages rather than as a separate release asset. Desktop source code and the private signing key remain proprietary and are not published here.
 
+OmniBand 1.0.4 is the latest desktop release. The [desktop update roadmap](ROADMAP.md) tracks remaining validation and proposed follow-on work.
+
+### What's new in 1.0.4
+
+- Improved segmented-download resume checks, checkpoint recovery, bounded retries, and user-facing failure details.
+- Added a timestamp-based throughput graph that distinguishes benchmark samples, active-download rates, idle periods, and waiting for data.
+- Updated the Downloads workspace with navigation, search, sorting, row actions, and manual URL entry.
+- Added saved workspace-scale and download-row-density preferences.
+- Published a self-contained installer and portable ZIP with the signed CRX and unpacked browser extension included. The installer is unsigned, so Windows may show an unknown-publisher warning.
+
 ### What's new in 1.0.3
 
 - The self-contained installer and portable ZIP include the signed Chrome CRX and unpacked extension folder beside the desktop app.
