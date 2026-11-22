@@ -6,7 +6,7 @@
 
 OmniBand is a Windows download manager that routes supported transfers across selected network adapters and keeps them in one queue.
 
-OmniBand is proprietary software. The Windows installer is free to download from the product website. Release assets include the installer and may include a portable application package and the companion browser extension; the Windows desktop application source code is not published here.
+OmniBand is proprietary software. The Windows installer is free to download from the product website. Release assets include the installer and portable app; desktop source code and the private extension signing key are not published here. The installer and portable package include the signed CRX and unpacked browser-extension folder.
 
 [**Download for Windows**](https://ominbandweb.vercel.app/api/v1/download) | [Product website](https://ominbandweb.vercel.app/) | [How it works](#how-it-works) | [Tech stack](#tech-stack) | [Support on Ko-fi](#support)
 
@@ -63,7 +63,7 @@ OmniBand includes the .NET runtime, so you do not need to install .NET separatel
 
 ## 🌐 Browser extension
 
-The Chrome and Edge companion extension captures browser downloads and hands them to the OmniBand desktop app. Install or connect it by following **Settings** → **Set up extension** in OmniBand.
+The Chrome and Edge companion extension captures browser downloads and hands them to the OmniBand desktop app. Open **Settings** → **Set up extension** in OmniBand. In Chrome or Edge on Windows, enable Developer mode, choose **Load unpacked**, and select the `chrome-extension` folder shown by the app. Standard Chrome on Windows blocks direct installation from a local CRX; the signed CRX is bundled for Web Store or managed distribution.
 
 ## ⚠️ Windows installer notice
 
@@ -71,19 +71,17 @@ The installer is not code-signed yet. Windows may show its standard unknown-publ
 
 ## 📦 Releases
 
-Download the latest installer or view previous versions on the [OmniBand website](https://ominbandweb.vercel.app/rilis).
+Download the latest installer from the [OmniBand website](https://ominbandweb.vercel.app/api/v1/download) or [GitHub Releases](https://github.com/khairulmzncode/omniband/releases).
 
-GitHub Releases provide the free Windows installer, release notes, and optional portable or browser-extension packages. The Windows desktop application source code remains proprietary and is not published here. Browser extension scripts are inspectable as part of the separately installed extension.
+GitHub Releases contain the installer, portable app, checksums, and setup instructions; the extension ships inside the app packages rather than as a separate release asset. Desktop source code and the private signing key remain proprietary and are not published here.
 
-### What's new in 1.0.1
+### What's new in 1.0.3
 
-- Updated the desktop app and installer version to 1.0.1.
-- Rebuilt the self-contained x64 Windows installer with the current release packaging process.
-- Added Windows uninstall support; removing the app also clears its browser-host and startup entries, while downloads and saved settings are retained by default.
-- Added a SHA-256 manifest for the app executable and installer, plus an unsigned-package notice.
-- The installer remains unsigned, so Windows may show its unknown-publisher warning.
-- This deployment changed version and release packaging; it did not include new download-engine or UI behavior.
-
+- The self-contained installer and portable ZIP include the signed Chrome CRX and unpacked extension folder beside the desktop app.
+- Browser setup points to the included extension folder. On Windows, install it with Developer mode → Load unpacked; Chrome Stable does not install an off-store local CRX directly.
+- Uninstalling clears OmniBand settings, tasks, queues, secrets, logs, native-host registration, startup entries, and extracted extension files. Downloaded files in the chosen destination are kept; browser-installed extensions must be removed in Chrome or Edge.
+- Added checksums and setup instructions for the release packages.
+- The installer remains unsigned, so Windows may show its unknown-publisher warning. The download engine did not change in this packaging release.
 ## 🌐 Product website
 
 Visit [ominbandweb.vercel.app](https://ominbandweb.vercel.app/) for product information and the download page.
