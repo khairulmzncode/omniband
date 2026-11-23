@@ -75,7 +75,15 @@ Download the latest installer from the [OmniBand website](https://ominbandweb.ve
 
 GitHub Releases contain the installer, portable app, checksums, and setup instructions; the extension ships inside the app packages rather than as a separate release asset. Desktop source code and the private signing key remain proprietary and are not published here.
 
-OmniBand 1.0.4 is the latest desktop release. The [desktop update roadmap](ROADMAP.md) tracks remaining validation and proposed follow-on work.
+OmniBand 1.0.5 is the latest desktop release. The [desktop update roadmap](ROADMAP.md) tracks remaining validation and proposed follow-on work.
+
+### What's new in 1.0.5
+
+- Fixed the progress window's time-left display after pause/resume and cleared stale active-stream rows when a transfer stops.
+- Shows the effective 100% initial share when only one connection is selected; excluded adapters are labeled clearly.
+- Keeps active-download throughput visible in Network overview and prevents a speed test from competing with an active file transfer.
+- The successful Cloudflare WARP route in the reported case allowed the file host to respond; OmniBand can only capture the download after Chrome actually starts it.
+- Updated the self-contained installer and portable ZIP. Both include the signed CRX and unpacked browser extension.
 
 ### What's new in 1.0.4
 

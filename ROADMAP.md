@@ -1,8 +1,8 @@
 # OmniBand desktop update roadmap
 
 **Planning date:** 2026-11-23
-**Current public release:** 1.0.4
-**Next planned update:** 1.0.5 — proposed
+**Current public release:** 1.0.5
+**Next planned update:** 1.0.6 — proposed
 **Scope:** Windows desktop application only. This page tracks shipped work and follow-up plans; it is not a release package.
 
 ## Delivered in 1.0.4
@@ -29,6 +29,8 @@
 
 OmniBand 1.0.4 is published with the first implementation pass: stricter segmented-resume and retry handling, clearer transfer failures, a timestamped benchmark/transfer throughput graph, distinct idle and no-data states, improved Downloads navigation and actions, inline manual URL entry, and saved workspace scale and row-density preferences. The release was built as a self-contained Windows installer and portable ZIP; the signed CRX and unpacked extension are included in each app package. These changes are not a claim that every transfer scenario has been proven. Deterministic protocol coverage, real-network checks, visual review across Windows display scales, and install/uninstall acceptance remain follow-up work.
 
+OmniBand 1.0.5 follows user-reported use of 1.0.4: it preserves the progress window's time-left binding across pause/resume, clears stale active-stream telemetry after a task stops, displays 100% effective initial share for a single selected adapter, prefers active-download rates in Network overview, and prevents benchmark traffic from competing with file transfers. The Release installer and portable ZIP compile successfully, and both include the CRX and unpacked extension. Automated download/network regression checks and clean-profile install/uninstall acceptance were not run for this release.
+
 ## Remaining validation
 
 - Exercise range handling, changed validators, partial recovery, retries, cancellation, adapter loss, and disk-write failures against a deterministic local HTTP server.
@@ -47,6 +49,6 @@ OmniBand 1.0.4 is published with the first implementation pass: stricter segment
 - Cleveland and McGill's [graphical-perception research](https://doi.org/10.1080/01621459.1984.10478080) supports comparing values with aligned positions on a shared scale; it does not choose OmniBand's visual style.
 - Microsoft's [WPF layout](https://learn.microsoft.com/en-us/dotnet/desktop/wpf/advanced/layout) and [high-DPI guidance](https://learn.microsoft.com/en-us/windows/win32/hidpi/high-dpi-desktop-application-development-on-windows) motivate separate app scaling and Windows display scaling, with mixed-DPI visual checks still required.
 
-## Planned for 1.0.5 and beyond
+## Planned for 1.0.6 and beyond
 
 The proposed playback-triggered video format panel follows as a later feature update. Each provider needs a source-policy review and format-specific validation before support is enabled; technical access to a stream is not permission to download it.
